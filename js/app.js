@@ -1,5 +1,7 @@
 'use strict';
 
+let locationTable = document.getElementById('table')
+
 let cookieList = document.getElementById('Seattle-total');
 
 console.log(cookieList);
@@ -38,38 +40,52 @@ storeLocation.prototype.cookiesperhour = function() {
 
 storeLocation.prototype.render = function() {
   this.cookiesperhour();
-  let storeName = document.createElement('h3');
-  storeName.textContent = this.location;
-  cookieList.appendChild(storeName);
-  let ulElem = document.createElement('ul');
-  cookieList.appendChild(ulElem);
+  let row1 = document.createElement('tr');
+  locationTable.appendChild(row1);
+
+  let tdElem = document.createElement('td');
+  tdElem.textContent = this.location
+  row1.appendChild (tdElem)
+
 
   for (let i = 0; i < this.cookiesarray.length; i++) {
-    let liElem = document.createElement('li');
-    liElem.textContent = hours[i] + ': ' + this.cookiesarray[i] + ' cookies';
-    ulElem.appendChild(liElem);
+    let td = document.createElement('td');
+    td.textContent = this.cookiesarray[i];
+    row1.appendChild(td);
     console.log('total: ', this.totalcookies);
   };
-  let totalElm = document.createElement('li');
-  totalElm.textContent = `total: ${this.totalcookies} cookies`;
-  ulElem.appendChild(totalElm);
+  let totalElm = document.createElement('td');
+  totalElm.textContent = this.totalcookies;
+  row1.appendChild(totalElm);
 
-  // *** Table Render ***
-  
-  let tableElem = document.createElement('table');
-  mainElem.appendChild(tableElem);
-
-  let tableBodyElem = document.createElement('tbody');
-  tableElem.appendChild(tableBodyElem);
-
-  let row1 = document.createElement('tr');
-  tableBodyElem.appendChild(row1);
-
-  let tdElem = docuement.createElement('td');
-  row1.textContent = '';
-   
 
 }
+
+function header () {
+  let tableHead = document.createElement ('thead')
+  locationTable.appendChild(tableHead);
+
+  let row = document.createElement('tr')
+  tableHead.appendChild(row);
+  
+  let tdElem = document.createElement('td');
+  row.appendChild(tdElem);
+
+  for (let i = 0; i < hours.length; i++){
+    let td = document.createElement('td');
+    td.textContent = hours[i];
+    row.appendChild(td);
+
+  }
+
+  let total = document.createElement('td');
+  total.textContent = 'Total';
+  row.appendChild(total);
+}
+
+  
+header();
+
 
 // initiated Locations 
 
