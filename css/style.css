@@ -56,34 +56,107 @@ main {
   background-color: white;
 }
 
-.location {
-  display: flex;
-  
+.section1 {
+  background-color: #74BDCB;
+  padding-bottom: 20px;
+  padding-top: 30px;
 }
 
-.location1, .location2, .location3 {
-  width: 200px;
-  height: 200px;
-  background-color: #74BDCB;
+h1 {
+  font-family:'Lobster', cursive;
+  font-size: 60px;
+  text-align: center;
+  background-color:#74BDCB ;
+  color: #EFE7BC;
+  margin-top: 20px; 
+   
+}
+
+.chinook img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container1 {
+  display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
   width: 50%;
-  color: white;
 }
 
-p {
+.column {
+  width: 300px;
+  height:175px;
+  border: 3px solid #FFA384;
   text-align: center;
-  padding-top: 15px;
 }
 
-div {
+h2 {
+ font-family: 'Lobster', cursive;
+ font-size: 25px;
+ 
+}
+
+
+.container2 ul {
   background-color: #EFE7BC;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  
 }
 
-footer {
-  background-color:#E7F2F8;
-  height: 50px;
+.pic {
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  margin-left: 30px;
 }
+  
+.container2 ul li {
+  list-style: none;
+}
+
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+
+}
+
+form {
+  text-align: center;
+}
+
+input[type="email"]{
+  padding: 10px;
+  border: 2px solid black;
+}
+
+input[type="submit"] {
+  padding: 13px 22px;
+  background-color: #FFA384;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  border: none;
+}
+
+.pic6 {
+  width: 400px;
+  height: 300px;
+  margin-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  
+
+
+
+
