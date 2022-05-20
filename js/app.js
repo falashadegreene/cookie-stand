@@ -4,7 +4,10 @@ let locationTable = document.getElementById('table')
 
 let cookieList = document.getElementById('Seattle-total');
 
-console.log(cookieList);
+//console.log(cookieList);
+
+// *** Window to cookie stand form ***
+let cookieForm = document.getElementById('cookie-stand-form');
 
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm']
 
@@ -52,7 +55,7 @@ storeLocation.prototype.render = function() {
     let td = document.createElement('td');
     td.textContent = this.cookiesarray[i];
     row1.appendChild(td);
-    console.log('total: ', this.totalcookies);
+    //console.log('total: ', this.totalcookies);
   };
   let totalElm = document.createElement('td');
   totalElm.textContent = this.totalcookies;
@@ -61,7 +64,7 @@ storeLocation.prototype.render = function() {
 
 }
 
-function header () {
+function header() {
   let tableHead = document.createElement ('thead')
   locationTable.appendChild(tableHead);
 
@@ -85,6 +88,38 @@ function header () {
 
   
 header();
+
+
+
+
+// *** create callback function
+
+function handleSubmit(event){
+  event.preventDefault();
+   
+
+ let locationName = event.target.locationName.value;
+ 
+ let cookiesMinimum = parseInt(event.target.cookiesMinimum.value);
+ let cookiesMaximum = parseInt(event.target.cookiesMaximum.value);
+ let cookiesAvg = parseFloat(event.target.cookiesAvg.value);
+ console.log(locationName,cookiesMinimum,cookiesMaximum,cookiesAvg);
+ let newLocation = new storeLocation(locationName, cookiesMinimum,cookiesMaximum,cookiesAvg);
+
+ 
+  
+ newLocation.render();
+}
+
+// *** event listner for cookie form ***
+
+cookieForm.addEventListener('submit', handleSubmit);
+
+
+
+
+
+
 
 
 // initiated Locations 
