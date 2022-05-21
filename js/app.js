@@ -86,8 +86,44 @@ function header() {
   row.appendChild(total);
 }
 
+// *** tablefooter ***
+function  tableFooter() {
+  let footElem = document.createElement('tfoot');
+   locationTable.appendChild(footElem);
+   //console.log('is there a foot?')
+   let newRow = document.createElement('tr');
+   footElem.appendChild(newRow);
+
+   let tdElem = document.createElement('td');
+   tdElem.textContent = 'Totals';
+   newRow.appendChild(tdElem);
+ 
+
   
+  let grandTotal = 0;
+  for (let i = 0; i < hours.length; i++){
+    let hrTotal = 0;
+    for (let j = 0; j < locationTotal.length; j++){
+      hrTotal += locationTotal[j].cookiesarray[i];
+      grandTotal += locationTotal[j].cookiesarray[i]; 
+    }
+    
+    let dataCell = document.createElement('td');
+    dataCell.textContent = `${hrTotal}`;
+    newRow.appendChild(dataCell);
+  }
+    let totalCell = document.createElement('td');
+    totalCell.textContent = grandTotal;
+    newRow.appendChild(totalCell);
+
+   
+ }
+ 
+
+tableFooter();
 header();
+
+
 
 
 
@@ -109,6 +145,10 @@ function handleSubmit(event){
  
   
  newLocation.render();
+
+ 
+
+
 }
 
 // *** event listner for cookie form ***
@@ -138,7 +178,6 @@ function renderTables() {
     locationTotal[i].render();
   }
 }
-
 
 
 
