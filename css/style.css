@@ -14,7 +14,6 @@ header {
 }
 
 
-
 nav {
   width: 1050px;
   margin: auto;
@@ -42,13 +41,13 @@ nav ul {
 nav ul li {
   margin-top: 20px;
   list-style: none;
-  color: white;
+  color: black;
   font-family: 'Fira Sans', sans-serif;
   font-size: 20px;
 }
 
 .Sales {
-  color: white;
+  color: black;
   text-decoration: none;  
 }
 
@@ -70,7 +69,7 @@ h1 {
   text-align: center;
   background-color:#74BDCB ;
   color: #EFE7BC;
-  margin-top: 20px; 
+  margin-top: 5px; 
    
 }
 
@@ -78,23 +77,37 @@ h1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  
+}
+
+.firstpic {
+  width: 400px;
+  height: 130px;
+  border-radius: 120px/70px;
+  border: 3px solid #F79489;
+  box-shadow: 5px 10px 18px #888888;
+  margin-top: -20px;
 }
 
 .container1 {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
   width: 50%;
+  
 }
 
 .column {
   width: 300px;
   height:175px;
-  border: 3px solid #FFA384;
+  border: none;
+  background-color: #FFA384;
   text-align: center;
+  border-radius: 25px;
+  margin-left: 15px;
+  padding: 15px;
 }
 
 h2 {
@@ -103,31 +116,45 @@ h2 {
  
 }
 
+h4 {
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+  text-align: center;
+  color: #FFA384;
+  margin-top: 40px;
+}
 
 .container2 ul {
-  background-color: #EFE7BC;
-  margin-top: 50px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
-  
+  padding-bottom: 20px;  
 }
 
 .pic {
   width: 200px;
   height: 200px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 30px;
-}
-  
-.container2 ul li {
-  list-style: none;
+  border-radius: 20px;
+  box-shadow: 5px 10px 18px #888888;
 }
 
+
+.container2 ul li {
+  list-style: none;
+  margin-top: 60px;
+}
+
+article {
+  background-color: #EFE7BC;
+  padding-bottom: 20px;
+}
 
 h2 {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px;
+  padding-top: 30px;
 
 }
 
@@ -137,7 +164,8 @@ form {
 
 input[type="email"]{
   padding: 10px;
-  border: 2px solid black;
+  border: none;
+  border-radius: 25px;
 }
 
 input[type="submit"] {
@@ -147,18 +175,106 @@ input[type="submit"] {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   border: none;
+  border-radius: 20px;
 }
 
 .pic6 {
   width: 400px;
   height: 300px;
-  margin-top: 50px;
+  margin-top: 30px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 10px;
+  border-radius: 25px;  
+}
+
+.artsection {
+  display: flex;
+  flex-direction: row;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.paragraph {
+  width: 400px;
+  height: 240px;
+  float: right;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 25px;
+}
+
+footer {
+  background-color:#74BDCB;
+  height: 50px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+table {
   border: 2px solid black;
-  
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  background-color:#74BDCB;
+}
 
+legend {
+  font-family: 'Lobster', cursive;
+  color: #74BDCB;
+  font-weight: 80px;
+}
 
+.salespage {
+  background-color: white;
+}
+
+.cookieform {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+fieldset {
+  height: 300px;
+  border-radius: 20px;
+  background-color: #EFE7BC;
+}
+
+.sales {
+  width: 100%;
+  padding: 7px;
+  margin: 8px 0;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+h6 {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Lobster', cursive;
+  color: #EFE7BC;
+}
+
+.salesbtn {
+   border: none;
+   border-radius: 10px;
+   background-color:#74BDCB;
+}
+
+.return {
+  color: black;
+}
 
 
